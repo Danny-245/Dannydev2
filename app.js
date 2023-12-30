@@ -55,3 +55,7 @@ if(currentHour >= 5 && currentHour < 12) {
 }
 greetings.innerText = greeting;
 console.log(greeting);
+
+function redirectToURL() {
+    window.location.href = 'https://wa.me/message/MDV2RS47L2DZG1'
+}
