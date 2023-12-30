@@ -272,6 +272,7 @@ gap: 77px;
   color: #fff;
   border: none;
   margin: 10px 0;
+  cursor: pointer;
   background-color: var(--color-pp);
 }
 .wwd {
@@ -436,20 +437,20 @@ margin-left: 80px;
 
 /* styling for the invalid msg */
 .invalidmsg {
-
+  font-family: 'Poppins', sans-serif;
   display: none;
-  border: 1px solid #7a0c0cbd;
+  box-shadow: 0 2px 3px #222;
   width: 300px;
   z-index: 10000;
   position: fixed;
   top: 50px;
+  color: rgb(143, 26, 26);
   left: 50%;
   transform: translate(-50%, -50%);
- color: #2e0606;
   padding: 16px 15px;
-  background: #d3363679;
+  background: #fff;
+  border-radius: 5px;
   animation: animate 0.3s linear;
-
 }
 @keyframes animate {
   0% {
@@ -769,8 +770,69 @@ cursor: pointer;
   background-position: center;
   background-size: cover;
 }
+.modal{
+  font-family: 'Josefin Sans', sans-serif;
+  display: none;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 99999999999;
+  padding: 20px 20px;
+  background-color: #fff;
+  top: 70px;
+  right: 20px;
+  /* box-shadow: 2px 2px 5px #2222225d; */
+  box-shadow: 0 2px 4px #22222263;
+ 
+}
 
+.modal .row-down {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background-color: #147224;
+  bottom: 0;
+  transition: 4s;
+  animation: rowd 3s linear infinite;
+}
+.modal p i {
+  color: #147224;
+}
 
+@keyframes rowd {
+  from{
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.modal.app {
+  display: block;
+}
+
+.livechat { 
+  cursor: pointer;
+  position: fixed;
+  border-radius: 50%;
+  bottom: 30px;
+  right: 25px; 
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(270deg, #0f4481, #528fd4);
+}
+.livechat i{
+  position: absolute;
+  /* margin-top: 25%;
+  margin-left: 25%; */
+  font-size: 25px;
+  text-align: center;
+  margin-left: 25%;
+  color: #fff;
+  line-height: 60px;
+}
 
 @media (max-width: 1000px) {
   
@@ -819,6 +881,15 @@ cursor: pointer;
   
 }
 @media (max-width: 750px) {
+  .footer .input-email .sub {
+    padding: 12.6px 20px;
+}
+  .footer .input-email input {
+    padding: 15px 15px;
+   
+    font-size: 11px;
+    border: none;
+    }
   .footer .input-email {
    
     margin: 0 30px;
