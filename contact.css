@@ -213,6 +213,7 @@ hr {
 }
 .location .where {
     margin: 40px 0;
+    font-family: 'Poppins', sans-serif;
 }
 .gsp .loc .icon  {
     margin: 20px 0;
