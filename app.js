@@ -107,3 +107,69 @@ if(currentHour >= 5 && currentHour < 12) {
 }
 greetings.innerText = greeting;
 console.log(greeting);
+
+const redeemBtn = document.getElementById('redeem-code');
+
+function generateCode() {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = '';
+    const codeLength = 10;
+
+    for(let i = 0; i < codeLength; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        code += characters[randomIndex];
+
+    }
+
+    let codeTxt = document.getElementById('code');
+
+
+    codeTxt.innerText = code;
+    
+    disableOtherButton();
+    
+
+    copyText();
+}
+let codeTxt = document.getElementById('code');
+
+
+function copyText() {
+    navigator.clipboard.writeText(codeTxt.innerText);
+    alert(' COPIED, Your CODE IS:  ' + codeTxt.innerText);
+}
+console.log(codeTxt.innerText);
+
+function disableOtherButton() {
+    const redeemBtn = document.getElementById('redeem-code');
+    const genCode = document.getElementById('generate-code');
+
+    redeemBtn.disabled = true;
+
+    setTimeout(function() {
+        redeemBtn.disabled = false;
+        redeemBtn.style.opacity = '1';
+        redeemBtn.style.cursor = 'pointer';
+        console.log('able');
+    }, 2000);
+}
+document.getElementById('generate-code').addEventListener('click', generateCode);
+
+function redeemGift() {
+    location.href = "gggg.com";
+}
+
+
+function showNyeve() {
+    const nyEve = document.getElementById('eve');
+    nyEve.classList.add('showEve');
+}
+setTimeout(showNyeve, 5000);
+
+const nyEve = document.getElementById('eve');
+const rmBtn = document.getElementById('rm-btn');
+rmBtn.addEventListener('click', function() {
+    nyEve.classList.remove('showEve');
+})
+
+console.log(nyEve.parentElement);
