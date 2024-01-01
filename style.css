@@ -1579,3 +1579,14 @@ hr.line {
     width: 350px;
   }
 }
+
+@media (max-width: 400px) {
+  .new-year-eve {
+    width: 310px;
+    padding: 5px;
+  }
+  .new-year-eve .new-year {
+    overflow-y: auto;
+    height: 530px;
+  }
+}
